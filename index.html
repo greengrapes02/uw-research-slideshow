@@ -677,7 +677,12 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     flex: 1;
+    align-content: center;
   }
+  /* Left column — right-aligned */
+  .fcol.w { text-align: right; }
+  .fcol.w .fitem { flex-direction: row-reverse; }
+  .fcol.w h3 { text-align: left; }
   .fcol h3 {
     font-size: 11px;
     font-weight: 700;
@@ -689,7 +694,7 @@
   }
   .fcol.w h3 { color: #059669; border-color: #6ee7b7; }
   .fcol.r h3 { color: #d97706; border-color: #fcd34d; }
-  #s12 .fcol h3 { text-align: center; }
+  #s12 .fcol h3 { text-align: left; }
   .fitem { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 12px; }
   .ficon {
     width: 22px; height: 22px;
@@ -1134,6 +1139,23 @@
   }
 
   /* ─────────────────────────────
+     Static chip + title overlay
+  ───────────────────────────── */
+  #slide-header {
+    position: absolute;
+    top: 28px;
+    left: 40px;
+    z-index: 10;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+  }
+  #slide-header a { pointer-events: auto; }
+  /* Hide chip + title inside each slide (space preserved for layout) */
+  .slide .label,
+  .slide .slide-title { visibility: hidden; }
+
+  /* ─────────────────────────────
      Controls
   ───────────────────────────── */
   #controls {
@@ -1177,6 +1199,12 @@
 <body>
 
 <div id="deck">
+
+  <!-- Static chip + title overlay (updates instantly on navigation) -->
+  <div id="slide-header">
+    <div id="header-label" class="label" style="display:none;"></div>
+    <div id="header-title" class="slide-title" style="display:none;"></div>
+  </div>
 
   <!-- ══ 1: Title ══ -->
   <div class="slide active" id="s1">
@@ -1612,45 +1640,51 @@
     </div>
   </div>
 
-  <!-- ══ 23: Key Features — Network Map ══ -->
+  <!-- ══ 23: Key Features — Research Network ══ -->
   <div class="slide" id="s23">
     <div class="label">Key features</div>
-    <div class="slide-title">Network map</div>
+    <div class="slide-title">Research network</div>
+    <p class="slide-sub">Explore UW research through interactive researcher connections.</p>
     <div class="ph" style="flex:1;">Network Map image</div>
   </div>
 
-  <!-- ══ 24: Key Features — Search ══ -->
+  <!-- ══ 24: Key Features — Search & Discovery ══ -->
   <div class="slide" id="s24">
     <div class="label">Key features</div>
-    <div class="slide-title">Search</div>
+    <div class="slide-title">Search &amp; discovery</div>
+    <p class="slide-sub">Find researchers, topics, and expertise across UW.</p>
     <div class="ph" style="flex:1;">Search image</div>
   </div>
 
-  <!-- ══ 25: Key Features — Profile Side Panel ══ -->
+  <!-- ══ 25: Key Features — Researcher Profiles ══ -->
   <div class="slide" id="s25">
     <div class="label">Key features</div>
-    <div class="slide-title">Profile side panel</div>
+    <div class="slide-title">Researcher profiles</div>
+    <p class="slide-sub">Understand expertise, interests, publications, and collaborations.</p>
     <div class="ph" style="flex:1;">Profile Side Panel image</div>
   </div>
 
-  <!-- ══ 26: Key Features — Profile Page ══ -->
+  <!-- ══ 26: Key Features — AI Research Assistant ══ -->
   <div class="slide" id="s26">
     <div class="label">Key features</div>
-    <div class="slide-title">Profile page</div>
+    <div class="slide-title">AI research assistant</div>
+    <p class="slide-sub">Ask questions and quickly understand research.</p>
     <div class="ph" style="flex:1;">Profile Page image</div>
   </div>
 
-  <!-- ══ 27: Key Features — Browse ══ -->
+  <!-- ══ 27: Key Features — Learn ══ -->
   <div class="slide" id="s27">
     <div class="label">Key features</div>
-    <div class="slide-title">Browse</div>
+    <div class="slide-title">Learn</div>
+    <p class="slide-sub">Discover trending topics through curated exploration.</p>
     <div class="ph" style="flex:1;">Browse image</div>
   </div>
 
-  <!-- ══ 28: Key Features — Library ══ -->
+  <!-- ══ 28: Key Features — Library & Shortlists ══ -->
   <div class="slide" id="s28">
     <div class="label">Key features</div>
-    <div class="slide-title">Library</div>
+    <div class="slide-title">Library &amp; shortlists</div>
+    <p class="slide-sub">Save and organize researchers and papers.</p>
     <div class="ph" style="flex:1;">Library image</div>
   </div>
 
@@ -1668,6 +1702,38 @@
   const total  = slides.length;
   let current  = 0;
   let locked   = false;
+
+  function updateHeader(slideEl) {
+    const hLabel = document.getElementById('header-label');
+    const hTitle = document.getElementById('header-title');
+    const labelEl = slideEl.querySelector('.label');
+    const titleEl = slideEl.querySelector('.slide-title');
+
+    if (labelEl) {
+      hLabel.textContent = labelEl.textContent;
+      hLabel.style.display = '';
+    } else {
+      hLabel.style.display = 'none';
+    }
+
+    if (titleEl) {
+      if (titleEl.tagName === 'A') {
+        const a = document.createElement('a');
+        a.href = titleEl.href;
+        if (titleEl.target) a.target = titleEl.target;
+        a.innerHTML = titleEl.innerHTML;
+        const s = titleEl.getAttribute('style');
+        if (s) a.setAttribute('style', s);
+        hTitle.innerHTML = '';
+        hTitle.appendChild(a);
+      } else {
+        hTitle.innerHTML = titleEl.innerHTML;
+      }
+      hTitle.style.display = '';
+    } else {
+      hTitle.style.display = 'none';
+    }
+  }
 
   function navigate(dir) {
     if (locked) return;
@@ -1690,6 +1756,7 @@
 
     const next = current + dir;
     if (next < 0 || next >= total) return;
+    updateHeader(slides[next]);
     locked = true;
 
     const from = slides[current];
@@ -1739,6 +1806,7 @@
   });
 
   updateUI();
+  updateHeader(slides[0]);
 
   // Slide 18 — alternating left/right image swap
   (function() {
