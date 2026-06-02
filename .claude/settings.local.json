@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /var/folders -name \"*.png\" -newer /Users/rupalpatel/uw-research-slideshow/index.html 2>/dev/null | head -10)",
+      "Read(//private/var/folders/**)",
+      "Read(//Users/rupalpatel/Desktop/OpenArt Experiments/**)",
+      "Bash(cp \"/Users/rupalpatel/Desktop/OpenArt Experiments/Screenshot 2026-06-02 at 3.33.21 AM.png\" \"/Users/rupalpatel/uw-research-slideshow/images/idea3.png\")",
+      "Bash(find \"/Users/rupalpatel/Desktop\" -name \"*.png\" -newer /Users/rupalpatel/uw-research-slideshow/index.html 2>/dev/null)",
+      "Read(//Users/rupalpatel/Desktop/**)",
+      "Bash(cp \"/Users/rupalpatel/Desktop/Screenshot 2026-06-02 at 3.33.21 AM.png\" \"/Users/rupalpatel/uw-research-slideshow/images/idea3.png\")",
+      "Bash(find /Users/rupalpatel -maxdepth 3 -name \"*3.33*\" 2>/dev/null)",
+      "Read(//Users/rupalpatel/**)"
+    ],
+    "additionalDirectories": [
+      "/Users/rupalpatel/Desktop/OpenArt Experiments",
+      "/Users/rupalpatel/Desktop"
+    ]
+  }
+}
