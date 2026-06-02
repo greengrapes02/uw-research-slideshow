@@ -18,7 +18,9 @@
     --shadow: 0 1px 8px rgba(0,0,0,0.07);
     --dur:    0.32s;
     --ease:   cubic-bezier(0.4,0,0.2,1);
-    --slide-h: calc(100vh - 56px); /* leave room for controls */
+    --scale: 1;
+    --scaled-w: 960px;
+    --scaled-h: 540px;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -35,10 +37,20 @@
   }
 
   /* ── Shell ── */
-  #deck {
-    width: min(96vw, calc(var(--slide-h) * 16 / 9));
-    aspect-ratio: 16/9;
+  #deck-wrapper {
+    width: var(--scaled-w);
+    height: var(--scaled-h);
     position: relative;
+    flex-shrink: 0;
+  }
+  #deck {
+    width: 960px;
+    height: 540px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+    transform: scale(var(--scale));
     overflow: hidden;
     background: var(--cream);
     border-radius: 12px;
@@ -1159,7 +1171,7 @@
      Controls
   ───────────────────────────── */
   #controls {
-    width: min(96vw, calc(var(--slide-h) * 16 / 9));
+    width: var(--scaled-w);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1181,7 +1193,7 @@
   #slide-counter { color: rgba(255,255,255,0.4); font-size: 13px; }
   .slide-footer { display: none; }
   #progress-wrap {
-    width: min(96vw, calc(var(--slide-h) * 16 / 9));
+    width: var(--scaled-w);
     height: 3px;
     background: rgba(255,255,255,0.08);
     border-radius: 2px;
@@ -1198,6 +1210,7 @@
 </head>
 <body>
 
+<div id="deck-wrapper">
 <div id="deck">
 
   <!-- Static chip + title overlay (updates instantly on navigation) -->
@@ -1689,6 +1702,7 @@
   </div>
 
 </div><!-- /deck -->
+</div><!-- /deck-wrapper -->
 
 <div id="controls">
   <button class="nav-btn" id="prevBtn" onclick="navigate(-1)" disabled>← Previous</button>
@@ -1804,6 +1818,23 @@
       e.preventDefault(); navigate(-1);
     }
   });
+
+  function scaleDeck() {
+    const W = 960, H = 540;
+    const controlsH = 56;
+    const availW = window.innerWidth;
+    const availH = window.innerHeight - controlsH;
+    const scale = Math.min(availW / W, availH / H);
+    const scaledW = Math.round(W * scale);
+    const scaledH = Math.round(H * scale);
+    const root = document.documentElement;
+    root.style.setProperty('--scale', scale);
+    root.style.setProperty('--scaled-w', scaledW + 'px');
+    root.style.setProperty('--scaled-h', scaledH + 'px');
+  }
+
+  scaleDeck();
+  window.addEventListener('resize', scaleDeck);
 
   updateUI();
   updateHeader(slides[0]);
