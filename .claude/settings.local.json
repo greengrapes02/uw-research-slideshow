@@ -9,7 +9,8 @@
       "Read(//Users/rupalpatel/Desktop/**)",
       "Bash(cp \"/Users/rupalpatel/Desktop/Screenshot 2026-06-02 at 3.33.21 AM.png\" \"/Users/rupalpatel/uw-research-slideshow/images/idea3.png\")",
       "Bash(find /Users/rupalpatel -maxdepth 3 -name \"*3.33*\" 2>/dev/null)",
-      "Read(//Users/rupalpatel/**)"
+      "Read(//Users/rupalpatel/**)",
+      "Bash(python3 -c ' *)"
     ],
     "additionalDirectories": [
       "/Users/rupalpatel/Desktop/OpenArt Experiments",
