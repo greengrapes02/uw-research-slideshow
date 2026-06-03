@@ -2034,6 +2034,427 @@
     </div>
   </div>
 
+
+  <!-- ══ 37: Why One Platform? ══ -->
+  <div class="slide" id="s37">
+    <div class="label" style="visibility:hidden;">Stakeholder Handoff | Project Direction</div>
+    <div class="slide-title" style="visibility:hidden;">Why One Platform?</div>
+    <div style="display:flex;flex-direction:column;flex:1;min-height:0;gap:10px;">
+      <p style="font-size:13px;color:var(--muted);line-height:1.4;">One of the most consequential decisions in the project was choosing to address both internal and external visibility through a single platform. This rationale is included because future implementation efforts need to understand why the project deliberately avoided creating separate solutions for researchers and external stakeholders.</p>
+      <div style="display:flex;gap:10px;flex:1;min-height:0;align-items:stretch;">
+
+        <!-- Left card -->
+        <div style="flex:1;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;display:flex;flex-direction:column;gap:7px;">
+          <div style="font-size:var(--fs-xs);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);">Internal Visibility</div>
+          <p style="font-size:var(--fs-xs);color:var(--text);line-height:1.4;">Researchers struggle to discover relevant work and collaborators across departments.</p>
+          <div style="font-size:10px;font-weight:600;color:var(--muted);">Key challenges</div>
+          <ul style="font-size:var(--fs-xs);color:var(--text);line-height:1.5;padding-left:14px;margin:0;">
+            <li>Discovery depends on personal networks</li>
+            <li>Cross-disciplinary collaboration is difficult</li>
+            <li>Research efforts remain siloed</li>
+          </ul>
+        </div>
+
+        <!-- Center card -->
+        <div style="flex:1.3;background:var(--blue);border-radius:var(--radius);padding:14px 16px;display:flex;flex-direction:column;gap:7px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.7);">Shared Discovery Infrastructure</div>
+          <div style="display:flex;flex-direction:column;gap:5px;flex:1;justify-content:center;">
+            <div style="background:rgba(255,255,255,0.15);border-radius:7px;padding:6px 12px;font-size:var(--fs-xs);color:#fff;font-weight:500;">Researcher Profiles</div>
+            <div style="background:rgba(255,255,255,0.15);border-radius:7px;padding:6px 12px;font-size:var(--fs-xs);color:#fff;font-weight:500;">Research Domains</div>
+            <div style="background:rgba(255,255,255,0.15);border-radius:7px;padding:6px 12px;font-size:var(--fs-xs);color:#fff;font-weight:500;">Publications</div>
+            <div style="background:rgba(255,255,255,0.15);border-radius:7px;padding:6px 12px;font-size:var(--fs-xs);color:#fff;font-weight:500;">Affiliations</div>
+            <div style="background:rgba(255,255,255,0.15);border-radius:7px;padding:6px 12px;font-size:var(--fs-xs);color:#fff;font-weight:500;">Search</div>
+            <div style="background:rgba(255,255,255,0.15);border-radius:7px;padding:6px 12px;font-size:var(--fs-xs);color:#fff;font-weight:500;">Network Relationships</div>
+            <div style="background:rgba(255,255,255,0.15);border-radius:7px;padding:6px 12px;font-size:var(--fs-xs);color:#fff;font-weight:500;">Recommendations</div>
+          </div>
+        </div>
+
+        <!-- Right card -->
+        <div style="flex:1;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;display:flex;flex-direction:column;gap:7px;">
+          <div style="font-size:var(--fs-xs);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);">External Visibility</div>
+          <p style="font-size:var(--fs-xs);color:var(--text);line-height:1.4;">External stakeholders struggle to understand what research exists at UW and who they should engage.</p>
+          <div style="font-size:10px;font-weight:600;color:var(--muted);">Key challenges</div>
+          <ul style="font-size:var(--fs-xs);color:var(--text);line-height:1.5;padding-left:14px;margin:0;">
+            <li>Information is fragmented</li>
+            <li>Experts are difficult to identify</li>
+            <li>Funding and partnership opportunities are missed</li>
+          </ul>
+        </div>
+
+      </div>
+      <div style="background:#f0f4ff;border-left:3px solid var(--blue);border-radius:0 6px 6px 0;padding:8px 12px;">
+        <p style="font-size:var(--fs-xs);color:var(--text);line-height:1.4;">Both challenges rely on the same researcher data and discovery infrastructure. Building separate systems would duplicate effort and recreate fragmentation.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ 38: Design Principles ══ -->
+  <div class="slide" id="s38">
+    <div class="label" style="visibility:hidden;">Stakeholder Handoff | Design Foundation</div>
+    <div class="slide-title" style="visibility:hidden;">Design Principles</div>
+    <div style="display:flex;flex-direction:column;flex:1;min-height:0;gap:10px;">
+      <p style="font-size:13px;color:var(--muted);line-height:1.4;">These principles emerged directly from our research findings and served as the decision-making framework throughout the design process. They are included so future teams understand the reasoning behind the solution, not just the features themselves.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:8px;flex:1;min-height:0;">
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;display:flex;flex-direction:column;gap:5px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);">01</div>
+          <div style="font-size:var(--fs-xs);font-weight:600;color:var(--text);line-height:1.3;">Balance Automation with Researcher Autonomy</div>
+          <p style="font-size:10px;color:var(--muted);line-height:1.4;">Auto-generated profiles reduce setup burden while preserving researcher control.</p>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;display:flex;flex-direction:column;gap:5px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);">02</div>
+          <div style="font-size:var(--fs-xs);font-weight:600;color:var(--text);line-height:1.3;">Design for Expert-Agnostic Collaboration</div>
+          <p style="font-size:10px;color:var(--muted);line-height:1.4;">Discovery should not require academic insider knowledge.</p>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;display:flex;flex-direction:column;gap:5px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);">03</div>
+          <div style="font-size:var(--fs-xs);font-weight:600;color:var(--text);line-height:1.3;">Align with Existing Research Workflows</div>
+          <p style="font-size:10px;color:var(--muted);line-height:1.4;">Leverage systems researchers already use rather than creating new behaviors.</p>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;display:flex;flex-direction:column;gap:5px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);">04</div>
+          <div style="font-size:var(--fs-xs);font-weight:600;color:var(--text);line-height:1.3;">Preserve the Joy of Research</div>
+          <p style="font-size:10px;color:var(--muted);line-height:1.4;">Support curiosity, exploration, and serendipitous discovery.</p>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;display:flex;flex-direction:column;gap:5px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);">05</div>
+          <div style="font-size:var(--fs-xs);font-weight:600;color:var(--text);line-height:1.3;">Surface Holistic Trust Signals</div>
+          <p style="font-size:10px;color:var(--muted);line-height:1.4;">Collaboration depends on more than publications and citations.</p>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;display:flex;flex-direction:column;gap:5px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);">06</div>
+          <div style="font-size:var(--fs-xs);font-weight:600;color:var(--text);line-height:1.3;">Amplify Research Visibility</div>
+          <p style="font-size:10px;color:var(--muted);line-height:1.4;">Increase visibility across researchers, funders, collaborators, and the public.</p>
+        </div>
+      </div>
+      <p style="font-size:10px;color:var(--muted);line-height:1.4;font-style:italic;">These principles became the lens through which we evaluated concepts, features, and tradeoffs.</p>
+    </div>
+  </div>
+
+  <!-- ══ 39: Recommended Proposal ══ -->
+  <div class="slide" id="s39">
+    <div class="label" style="visibility:hidden;">Stakeholder Handoff | Recommendation</div>
+    <div class="slide-title" style="visibility:hidden;">Recommended Proposal</div>
+    <div style="display:flex;flex-direction:column;flex:1;min-height:0;gap:10px;">
+      <p style="font-size:13px;color:var(--muted);line-height:1.4;">This slide summarizes our final recommendation based on user research, concept testing, sponsor feedback, and implementation constraints. It clarifies what should be prioritized in an initial version of the platform versus opportunities that can be explored later.</p>
+      <div style="display:flex;gap:12px;flex:1;min-height:0;align-items:stretch;">
+
+        <!-- Left -->
+        <div style="flex:1;background:#f0f4ff;border:1px solid #c7d4fb;border-radius:var(--radius);padding:14px 16px;display:flex;flex-direction:column;gap:8px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);">Launch Recommendation</div>
+          <div style="display:flex;flex-direction:column;gap:5px;flex:1;">
+            <div style="display:flex;align-items:center;gap:8px;padding:6px 10px;background:#fff;border-radius:7px;border:1px solid var(--border);">
+              <span style="color:var(--blue);font-size:13px;">✓</span>
+              <span style="font-size:var(--fs-xs);color:var(--text);">Explore through network visualization</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:6px 10px;background:#fff;border-radius:7px;border:1px solid var(--border);">
+              <span style="color:var(--blue);font-size:13px;">✓</span>
+              <span style="font-size:var(--fs-xs);color:var(--text);">Researcher profiles with AI-assisted understanding</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:6px 10px;background:#fff;border-radius:7px;border:1px solid var(--border);">
+              <span style="color:var(--blue);font-size:13px;">✓</span>
+              <span style="font-size:var(--fs-xs);color:var(--text);">Search and natural-language discovery</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:6px 10px;background:#fff;border-radius:7px;border:1px solid var(--border);">
+              <span style="color:var(--blue);font-size:13px;">✓</span>
+              <span style="font-size:var(--fs-xs);color:var(--text);">Learn / Shortlist browsing experience</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:6px 10px;background:#fff;border-radius:7px;border:1px solid var(--border);">
+              <span style="color:var(--blue);font-size:13px;">✓</span>
+              <span style="font-size:var(--fs-xs);color:var(--text);">Personal library and saved collections</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:6px 10px;background:#fff;border-radius:7px;border:1px solid var(--border);">
+              <span style="color:var(--blue);font-size:13px;">✓</span>
+              <span style="font-size:var(--fs-xs);color:var(--text);">Public and researcher access paths</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right -->
+        <div style="flex:1;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;display:flex;flex-direction:column;gap:8px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);">Future Opportunities</div>
+          <div style="display:flex;flex-direction:column;gap:5px;flex:1;">
+            <div style="display:flex;align-items:center;gap:8px;padding:6px 10px;background:#f9fafb;border-radius:7px;border:1px solid var(--border);">
+              <span style="color:var(--muted);font-size:12px;">→</span>
+              <span style="font-size:var(--fs-xs);color:var(--muted);">Research Opportunity Map</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:6px 10px;background:#f9fafb;border-radius:7px;border:1px solid var(--border);">
+              <span style="color:var(--muted);font-size:12px;">→</span>
+              <span style="font-size:var(--fs-xs);color:var(--muted);">Heatmap overlays</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:6px 10px;background:#f9fafb;border-radius:7px;border:1px solid var(--border);">
+              <span style="color:var(--muted);font-size:12px;">→</span>
+              <span style="font-size:var(--fs-xs);color:var(--muted);">Research Reels</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:6px 10px;background:#f9fafb;border-radius:7px;border:1px solid var(--border);">
+              <span style="color:var(--muted);font-size:12px;">→</span>
+              <span style="font-size:var(--fs-xs);color:var(--muted);">Timeline views</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:6px 10px;background:#f9fafb;border-radius:7px;border:1px solid var(--border);">
+              <span style="color:var(--muted);font-size:12px;">→</span>
+              <span style="font-size:var(--fs-xs);color:var(--muted);">Federated discovery across institutions</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div style="background:#f0fdf4;border-left:3px solid #22c55e;border-radius:0 6px 6px 0;padding:8px 12px;">
+        <p style="font-size:var(--fs-xs);color:var(--text);line-height:1.4;">The initial release should focus on discovery, researcher visibility, and collaboration. Opportunity maps, timelines, reels, and cross-institution discovery should be treated as future phases after the core platform demonstrates value.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ 40: Key Decisions & Tradeoffs ══ -->
+  <div class="slide" id="s40">
+    <div class="label" style="visibility:hidden;">Stakeholder Handoff | Design Decisions</div>
+    <div class="slide-title" style="visibility:hidden;">Key Decisions &amp; Tradeoffs</div>
+    <div style="display:flex;flex-direction:column;flex:1;min-height:0;gap:10px;">
+      <p style="font-size:13px;color:var(--muted);line-height:1.4;">The final proposal reflects a series of design tradeoffs informed by research, testing, and stakeholder conversations. Capturing these decisions helps future teams understand why the platform evolved in its current direction and prevents revisiting already-resolved questions.</p>
+      <div style="display:flex;flex-direction:column;gap:6px;flex:1;min-height:0;justify-content:center;">
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:10px 14px;display:flex;gap:14px;align-items:flex-start;">
+          <div style="min-width:22px;height:22px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;flex-shrink:0;">1</div>
+          <div style="flex:1;">
+            <div style="font-size:var(--fs-xs);font-weight:700;color:var(--text);margin-bottom:2px;">Explore-First Experience</div>
+            <p style="font-size:10px;color:var(--muted);line-height:1.4;">External stakeholders often did not know what to search for. We shifted from a search-first interface to exploration through the network visualization.</p>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:10px 14px;display:flex;gap:14px;align-items:flex-start;">
+          <div style="min-width:22px;height:22px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;flex-shrink:0;">2</div>
+          <div style="flex:1;">
+            <div style="font-size:var(--fs-xs);font-weight:700;color:var(--text);margin-bottom:2px;">Auto-Generated Profiles</div>
+            <p style="font-size:10px;color:var(--muted);line-height:1.4;">Researchers consistently described profile maintenance as burdensome. Auto-generation reduces setup while creating value from day one.</p>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:10px 14px;display:flex;gap:14px;align-items:flex-start;">
+          <div style="min-width:22px;height:22px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;flex-shrink:0;">3</div>
+          <div style="flex:1;">
+            <div style="font-size:var(--fs-xs);font-weight:700;color:var(--text);margin-bottom:2px;">Unified Platform</div>
+            <p style="font-size:10px;color:var(--muted);line-height:1.4;">Internal and external visibility problems share the same data ecosystem. A single platform creates consistency and reduces fragmentation.</p>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:10px 14px;display:flex;gap:14px;align-items:flex-start;">
+          <div style="min-width:22px;height:22px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;flex-shrink:0;">4</div>
+          <div style="flex:1;">
+            <div style="font-size:var(--fs-xs);font-weight:700;color:var(--text);margin-bottom:2px;">Warm Introductions over Direct Messaging</div>
+            <p style="font-size:10px;color:var(--muted);line-height:1.4;">Researchers expressed stronger trust in existing connections than cold outreach. We removed direct messaging and surfaced mutual connections instead.</p>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:10px 14px;display:flex;gap:14px;align-items:flex-start;">
+          <div style="min-width:22px;height:22px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;flex-shrink:0;">5</div>
+          <div style="flex:1;">
+            <div style="font-size:var(--fs-xs);font-weight:700;color:var(--text);margin-bottom:2px;">Show Trust, Don't Ask for Trust</div>
+            <p style="font-size:10px;color:var(--muted);line-height:1.4;">Researchers described trust as emerging through relationships and shared collaborators. The platform surfaces trust through collaboration history and mutual connections rather than self-reported traits.</p>
+          </div>
+        </div>
+      </div>
+      <div style="background:#f9fafb;border-left:3px solid var(--border);border-radius:0 6px 6px 0;padding:8px 12px;">
+        <p style="font-size:10px;color:var(--muted);line-height:1.4;font-style:italic;">"We started with researcher profiles. We ended with a research discovery ecosystem."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ 41: Critical Assumptions ══ -->
+  <div class="slide" id="s41">
+    <div class="label" style="visibility:hidden;">Stakeholder Handoff | Implementation</div>
+    <div class="slide-title" style="visibility:hidden;">Critical Assumptions</div>
+    <div style="display:flex;flex-direction:column;flex:1;min-height:0;gap:10px;">
+      <p style="font-size:13px;color:var(--muted);line-height:1.4;">The proposal depends on several assumptions that were outside the scope of the capstone to fully validate. These assumptions should be treated as areas for additional research, testing, and implementation planning.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:8px;flex:1;min-height:0;">
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;display:flex;flex-direction:column;gap:6px;">
+          <div style="width:22px;height:22px;background:#f0f4ff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--blue);">1</div>
+          <div style="font-size:var(--fs-xs);font-weight:600;color:var(--text);">Data Source Access</div>
+          <p style="font-size:10px;color:var(--muted);line-height:1.4;">ORCID, UW Directory, Google Scholar, and related data sources remain accessible for profile generation and discovery.</p>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;display:flex;flex-direction:column;gap:6px;">
+          <div style="width:22px;height:22px;background:#f0f4ff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--blue);">2</div>
+          <div style="font-size:var(--fs-xs);font-weight:600;color:var(--text);">Data Quality</div>
+          <p style="font-size:10px;color:var(--muted);line-height:1.4;">Source data is accurate and complete enough to generate useful researcher profiles.</p>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;display:flex;flex-direction:column;gap:6px;">
+          <div style="width:22px;height:22px;background:#f0f4ff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--blue);">3</div>
+          <div style="font-size:var(--fs-xs);font-weight:600;color:var(--text);">Institutional Authority</div>
+          <p style="font-size:10px;color:var(--muted);line-height:1.4;">ORIS has the authority to aggregate, display, and maintain researcher information.</p>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;display:flex;flex-direction:column;gap:6px;">
+          <div style="width:22px;height:22px;background:#f0f4ff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--blue);">4</div>
+          <div style="font-size:var(--fs-xs);font-weight:600;color:var(--text);">Researcher Participation</div>
+          <p style="font-size:10px;color:var(--muted);line-height:1.4;">Researchers will periodically update collaboration interests, current focus areas, and profile information.</p>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;display:flex;flex-direction:column;gap:6px;">
+          <div style="width:22px;height:22px;background:#f0f4ff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--blue);">5</div>
+          <div style="font-size:var(--fs-xs);font-weight:600;color:var(--text);">AI Reliability</div>
+          <p style="font-size:10px;color:var(--muted);line-height:1.4;">AI-generated explanations and summaries are accurate enough for institutional representation.</p>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;display:flex;flex-direction:column;gap:6px;">
+          <div style="width:22px;height:22px;background:#f0f4ff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--blue);">6</div>
+          <div style="font-size:var(--fs-xs);font-weight:600;color:var(--text);">Long-Term Governance</div>
+          <p style="font-size:10px;color:var(--muted);line-height:1.4;">ORIS has sufficient funding, resources, and governance capacity to operate the platform over time.</p>
+        </div>
+      </div>
+      <p style="font-size:10px;color:var(--muted);line-height:1.4;font-style:italic;">These assumptions represent critical dependencies that should be validated before large-scale implementation.</p>
+    </div>
+  </div>
+
+  <!-- ══ 42: What Happens Next? ══ -->
+  <div class="slide" id="s42">
+    <div class="label" style="visibility:hidden;">Stakeholder Handoff | Future Roadmap</div>
+    <div class="slide-title" style="visibility:hidden;">Roadmap to Implementation</div>
+    <div style="display:flex;flex-direction:column;flex:1;min-height:0;gap:10px;">
+      <p style="font-size:13px;color:var(--muted);line-height:1.4;">The capstone concludes with a validated concept and working prototype. This roadmap outlines the recommended sequence of activities required to move from prototype to a deployable institutional platform.</p>
+      <div style="display:flex;gap:8px;flex:1;min-height:0;align-items:stretch;">
+
+        <!-- Phase 1 -->
+        <div style="flex:1;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:14px;display:flex;flex-direction:column;gap:7px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);">Phase 1</div>
+          <div style="font-size:var(--fs-xs);font-weight:700;color:var(--text);">Internal Foundation</div>
+          <div style="font-size:10px;color:var(--muted);margin-top:-4px;">Months 1–6</div>
+          <div style="display:flex;flex-direction:column;gap:4px;flex:1;">
+            <div style="font-size:var(--fs-xs);color:var(--muted);padding:4px 0;border-bottom:1px solid var(--border);">Connect ORCID, UW Directory, and Google Scholar</div>
+            <div style="font-size:var(--fs-xs);color:var(--muted);padding:4px 0;border-bottom:1px solid var(--border);">Auto-generate researcher profiles</div>
+            <div style="font-size:var(--fs-xs);color:var(--muted);padding:4px 0;border-bottom:1px solid var(--border);">Launch internally to UW researchers</div>
+            <div style="font-size:var(--fs-xs);color:var(--muted);padding:4px 0;">Build researcher trust and profile ownership</div>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;color:var(--muted);font-size:16px;">→</div>
+
+        <!-- Phase 2 -->
+        <div style="flex:1;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:14px;display:flex;flex-direction:column;gap:7px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);">Phase 2</div>
+          <div style="font-size:var(--fs-xs);font-weight:700;color:var(--text);">External Access &amp; Core Features</div>
+          <div style="font-size:10px;color:var(--muted);margin-top:-4px;">Months 6–12</div>
+          <div style="display:flex;flex-direction:column;gap:4px;flex:1;">
+            <div style="font-size:var(--fs-xs);color:var(--muted);padding:4px 0;border-bottom:1px solid var(--border);">Open platform to external stakeholders</div>
+            <div style="font-size:var(--fs-xs);color:var(--muted);padding:4px 0;border-bottom:1px solid var(--border);">Launch discovery experience</div>
+            <div style="font-size:var(--fs-xs);color:var(--muted);padding:4px 0;border-bottom:1px solid var(--border);">Introduce AI-assisted profile understanding</div>
+            <div style="font-size:var(--fs-xs);color:var(--muted);padding:4px 0;">Enable researcher onboarding and profile refinement</div>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;color:var(--muted);font-size:16px;">→</div>
+
+        <!-- Phase 3 -->
+        <div style="flex:1;background:var(--blue);border-radius:var(--radius);padding:14px;display:flex;flex-direction:column;gap:7px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.7);">Phase 3</div>
+          <div style="font-size:var(--fs-xs);font-weight:700;color:#fff;">Expanded Features</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.7);margin-top:-4px;">Year 2+</div>
+          <div style="display:flex;flex-direction:column;gap:4px;flex:1;">
+            <div style="font-size:var(--fs-xs);color:rgba(255,255,255,0.85);padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.2);">Research Opportunity Map</div>
+            <div style="font-size:var(--fs-xs);color:rgba(255,255,255,0.85);padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.2);">Research Reels</div>
+            <div style="font-size:var(--fs-xs);color:rgba(255,255,255,0.85);padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.2);">Timeline views</div>
+            <div style="font-size:var(--fs-xs);color:rgba(255,255,255,0.85);padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.2);">Cross-institution discovery</div>
+            <div style="font-size:var(--fs-xs);color:rgba(255,255,255,0.85);padding:4px 0;">Advanced collaboration features</div>
+          </div>
+        </div>
+
+      </div>
+      <div style="background:#f0fdf4;border-left:3px solid #22c55e;border-radius:0 6px 6px 0;padding:8px 12px;">
+        <p style="font-size:var(--fs-xs);color:var(--text);line-height:1.4;">A phased rollout reduces implementation risk and creates checkpoints for validating assumptions before expanding platform scope.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ 43: What We Learned ══ -->
+  <div class="slide" id="s43">
+    <div class="label" style="visibility:hidden;">Stakeholder Handoff | Reflection</div>
+    <div class="slide-title" style="visibility:hidden;">What We Learned</div>
+    <div style="display:flex;flex-direction:column;flex:1;min-height:0;gap:10px;">
+      <p style="font-size:13px;color:var(--muted);line-height:1.4;">Beyond the final design, the project generated lessons about research ecosystems, institutional design, and collaboration. These reflections capture the most important insights we would pass to future teams continuing this work.</p>
+      <div style="display:flex;gap:10px;flex:1;min-height:0;align-items:stretch;">
+
+        <!-- Card 1 -->
+        <div style="flex:1;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;display:flex;flex-direction:column;gap:8px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);">The Pivot</div>
+          <p style="font-size:var(--fs-sm);color:var(--text);line-height:1.5;">We started with a brief focused on researcher profile discoverability. Research revealed a broader challenge around visibility, trust, and collaboration in an AI-accelerated research landscape.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div style="flex:1;background:var(--blue);border-radius:var(--radius);padding:18px 20px;display:flex;flex-direction:column;gap:8px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.7);">The Surprise</div>
+          <p style="font-size:var(--fs-sm);color:#fff;line-height:1.5;">Researchers had already adapted to fragmented systems. The deeper challenge was not profile management, but discovering the right people and building trusted connections.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div style="flex:1;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;display:flex;flex-direction:column;gap:8px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);">The Unresolved Tension</div>
+          <p style="font-size:var(--fs-sm);color:var(--text);line-height:1.5;">Reducing profile maintenance through automation while preserving meaningful researcher control over public representation remains the most important unresolved design challenge.</p>
+        </div>
+
+      </div>
+      <div style="background:#f9fafb;border-left:3px solid var(--border);border-radius:0 6px 6px 0;padding:8px 12px;">
+        <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.4;font-style:italic;">"The job of a design team is not to execute the brief, but to use the brief as a starting point and be honest when the evidence points somewhere else."</p>
+      </div>
+      <div style="display:flex;gap:16px;align-items:center;">
+        <span style="font-size:10px;color:var(--muted);">Prototype built using Claude Code and Warp</span>
+        <span style="font-size:10px;color:var(--border);">|</span>
+        <span style="font-size:10px;color:var(--muted);">Research synthesis supported by NotebookLM</span>
+        <span style="font-size:10px;color:var(--border);">|</span>
+        <span style="font-size:10px;color:var(--muted);">Recommendations informed by 30+ competitive analyses, 26 survey responses, 16 interviews, 14 concept tests, and sponsor feedback</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══ 44: Risks, Ethics & Governance ══ -->
+  <div class="slide" id="s44">
+    <div class="label" style="visibility:hidden;">Stakeholder Handoff | Ethics &amp; Governance</div>
+    <div class="slide-title" style="visibility:hidden;">Risks, Ethics &amp; Governance</div>
+    <div style="display:flex;flex-direction:column;flex:1;min-height:0;gap:10px;">
+      <p style="font-size:13px;color:var(--muted);line-height:1.4;">Because Dub's Research Hub aggregates researcher information, surfaces AI-generated explanations, and increases visibility across the research ecosystem, implementation requires careful governance. This slide captures the primary risks identified during the project and the mitigation strategies recommended for future teams.</p>
+      <div style="display:flex;gap:12px;flex:1;min-height:0;align-items:stretch;">
+
+        <!-- Left: Risk Areas -->
+        <div style="flex:1;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;display:flex;flex-direction:column;gap:10px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#dc2626;">Risk Areas</div>
+          <div style="display:flex;flex-direction:column;gap:7px;flex:1;justify-content:center;">
+            <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;background:#fef2f2;border-radius:8px;border:1px solid #fecaca;">
+              <span style="color:#dc2626;font-size:14px;line-height:1;margin-top:1px;">⚠</span>
+              <span style="font-size:var(--fs-xs);color:var(--text);line-height:1.4;">Data aggregation without explicit consent</span>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;background:#fef2f2;border-radius:8px;border:1px solid #fecaca;">
+              <span style="color:#dc2626;font-size:14px;line-height:1;margin-top:1px;">⚠</span>
+              <span style="font-size:var(--fs-xs);color:var(--text);line-height:1.4;">AI-mediated misrepresentation</span>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;background:#fef2f2;border-radius:8px;border:1px solid #fecaca;">
+              <span style="color:#dc2626;font-size:14px;line-height:1;margin-top:1px;">⚠</span>
+              <span style="font-size:var(--fs-xs);color:var(--text);line-height:1.4;">Visibility inequality and prestige amplification</span>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;background:#fef2f2;border-radius:8px;border:1px solid #fecaca;">
+              <span style="color:#dc2626;font-size:14px;line-height:1;margin-top:1px;">⚠</span>
+              <span style="font-size:var(--fs-xs);color:var(--text);line-height:1.4;">Industry influence on research priorities</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Mitigations -->
+        <div style="flex:1;background:#f0f4ff;border:1px solid #c7d4fb;border-radius:var(--radius);padding:18px 20px;display:flex;flex-direction:column;gap:10px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);">Recommended Mitigations</div>
+          <div style="display:flex;flex-direction:column;gap:7px;flex:1;justify-content:center;">
+            <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;background:#fff;border-radius:8px;border:1px solid var(--border);">
+              <span style="color:var(--blue);font-size:13px;line-height:1;margin-top:1px;">✓</span>
+              <span style="font-size:var(--fs-xs);color:var(--text);line-height:1.4;">Researcher review, editing, and opt-out controls</span>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;background:#fff;border-radius:8px;border:1px solid var(--border);">
+              <span style="color:var(--blue);font-size:13px;line-height:1;margin-top:1px;">✓</span>
+              <span style="font-size:var(--fs-xs);color:var(--text);line-height:1.4;">Clear AI labeling and source attribution</span>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;background:#fff;border-radius:8px;border:1px solid var(--border);">
+              <span style="color:var(--blue);font-size:13px;line-height:1;margin-top:1px;">✓</span>
+              <span style="font-size:var(--fs-xs);color:var(--text);line-height:1.4;">Discovery mechanisms that do not prioritize citations alone</span>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;background:#fff;border-radius:8px;border:1px solid var(--border);">
+              <span style="color:var(--blue);font-size:13px;line-height:1;margin-top:1px;">✓</span>
+              <span style="font-size:var(--fs-xs);color:var(--text);line-height:1.4;">Ongoing governance and monitoring by ORIS</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div style="background:#f0f4ff;border-left:3px solid var(--blue);border-radius:0 6px 6px 0;padding:8px 12px;">
+        <p style="font-size:var(--fs-xs);color:var(--text);line-height:1.4;">Increasing visibility creates value, but visibility must be paired with transparency, researcher control, and institutional stewardship.</p>
+      </div>
+    </div>
+  </div>
+
 </div><!-- /deck -->
 
 <div id="controls">
