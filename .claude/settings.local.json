@@ -10,7 +10,12 @@
       "Bash(cp \"/Users/rupalpatel/Desktop/Screenshot 2026-06-02 at 3.33.21 AM.png\" \"/Users/rupalpatel/uw-research-slideshow/images/idea3.png\")",
       "Bash(find /Users/rupalpatel -maxdepth 3 -name \"*3.33*\" 2>/dev/null)",
       "Read(//Users/rupalpatel/**)",
-      "Bash(python3 -c ' *)"
+      "Bash(python3 -c ' *)",
+      "Bash(open /Users/rupalpatel/uw-research-slideshow/index.html)",
+      "Bash(ls -t /var/folders/ 2>/dev/null | head -5; ls /tmp/*.png /tmp/*.jpg 2>/dev/null | head -5; ls ~/Desktop/*.png ~/Desktop/*.jpg 2>/dev/null | head -10)",
+      "Read(//private/tmp/**)",
+      "Bash(xargs ls -t)",
+      "Bash(python3 -c \"import shutil; shutil.copy\\('/Users/rupalpatel/Desktop/OpenArt Experiments/Screenshot 2026-06-03 at 12.15.27 AM.png', '/Users/rupalpatel/uw-research-slideshow/images/prototool.png'\\)\")"
     ],
     "additionalDirectories": [
       "/Users/rupalpatel/Desktop/OpenArt Experiments",
