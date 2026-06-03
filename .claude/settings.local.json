@@ -15,7 +15,12 @@
       "Bash(ls -t /var/folders/ 2>/dev/null | head -5; ls /tmp/*.png /tmp/*.jpg 2>/dev/null | head -5; ls ~/Desktop/*.png ~/Desktop/*.jpg 2>/dev/null | head -10)",
       "Read(//private/tmp/**)",
       "Bash(xargs ls -t)",
-      "Bash(python3 -c \"import shutil; shutil.copy\\('/Users/rupalpatel/Desktop/OpenArt Experiments/Screenshot 2026-06-03 at 12.15.27 AM.png', '/Users/rupalpatel/uw-research-slideshow/images/prototool.png'\\)\")"
+      "Bash(python3 -c \"import shutil; shutil.copy\\('/Users/rupalpatel/Desktop/OpenArt Experiments/Screenshot 2026-06-03 at 12.15.27 AM.png', '/Users/rupalpatel/uw-research-slideshow/images/prototool.png'\\)\")",
+      "Bash(code --open-url \"vscode://vscode.simpleBrowser/show?url=file:///Users/rupalpatel/uw-research-slideshow/index.html\")",
+      "Bash(python3 -m http.server 5500)",
+      "Bash(echo \"Server PID: $!\")",
+      "Bash(open \"http://localhost:5500\")",
+      "Bash(open \"vscode://vscode.simpleBrowser/show?url=http://localhost:5500\")"
     ],
     "additionalDirectories": [
       "/Users/rupalpatel/Desktop/OpenArt Experiments",
