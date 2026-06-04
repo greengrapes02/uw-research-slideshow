@@ -20,11 +20,13 @@
       "Bash(python3 -m http.server 5500)",
       "Bash(echo \"Server PID: $!\")",
       "Bash(open \"http://localhost:5500\")",
-      "Bash(open \"vscode://vscode.simpleBrowser/show?url=http://localhost:5500\")"
+      "Bash(open \"vscode://vscode.simpleBrowser/show?url=http://localhost:5500\")",
+      "Bash(cp \"/Users/rupalpatel/Downloads/Presentation Pictures by Inika.png\" \"/Users/rupalpatel/uw-research-slideshow/images/datapipeline.png\")"
     ],
     "additionalDirectories": [
       "/Users/rupalpatel/Desktop/OpenArt Experiments",
-      "/Users/rupalpatel/Desktop"
+      "/Users/rupalpatel/Desktop",
+      "/Users/rupalpatel/Downloads"
     ]
   }
 }
